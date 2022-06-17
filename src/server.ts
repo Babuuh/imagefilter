@@ -16,7 +16,8 @@ import isURL from 'validator/lib/isURL';
 
 
   //! END @TODO1
-  app.get("/filteredimage", async (req, res) => {
+ 
+  app.get( "/filteredimage/", async (req:express.Request, res:express.Response) => {
     const { image_url } = req.query;
 
     // Check if the user has input a url and if it is a valid one
@@ -47,7 +48,7 @@ import isURL from 'validator/lib/isURL';
 
   // Root Endpoint
   // Displays a simple message to the user
-  app.get("/", async (req, res) => {
+  app.get("/", async (req:express.Request, res:express.Response) => {
     res.send("try GET /filteredimage?image_url={{}}")
   });
 
